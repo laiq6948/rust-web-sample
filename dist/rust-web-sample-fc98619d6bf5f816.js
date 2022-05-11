@@ -270,7 +270,7 @@ async function load(module, imports) {
 
 async function init(input) {
     if (typeof input === 'undefined') {
-        input = new URL('rust-web-sample-e48abbbd07f47087_bg.wasm', import.meta.url);
+        input = new URL('rust-web-sample-fc98619d6bf5f816_bg.wasm', import.meta.url);
     }
     const imports = {};
     imports.wbg = {};
@@ -341,13 +341,6 @@ async function init(input) {
     imports.wbg.__wbg_createTextNode_72cf3c22f1eed9ee = function(arg0, arg1, arg2) {
         const ret = getObject(arg0).createTextNode(getStringFromWasm0(arg1, arg2));
         return addHeapObject(ret);
-    };
-    imports.wbg.__wbg_data_0166306070cc6f40 = function(arg0, arg1) {
-        const ret = getObject(arg1).data;
-        var ptr0 = isLikeNone(ret) ? 0 : passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
-        var len0 = WASM_VECTOR_LEN;
-        getInt32Memory0()[arg0 / 4 + 1] = len0;
-        getInt32Memory0()[arg0 / 4 + 0] = ptr0;
     };
     imports.wbg.__wbg_parentElement_d078cf0bd5c4b641 = function(arg0) {
         const ret = getObject(arg0).parentElement;
@@ -499,8 +492,8 @@ async function init(input) {
     imports.wbg.__wbindgen_throw = function(arg0, arg1) {
         throw new Error(getStringFromWasm0(arg0, arg1));
     };
-    imports.wbg.__wbindgen_closure_wrapper2329 = function(arg0, arg1, arg2) {
-        const ret = makeClosure(arg0, arg1, 100, __wbg_adapter_18);
+    imports.wbg.__wbindgen_closure_wrapper2965 = function(arg0, arg1, arg2) {
+        const ret = makeClosure(arg0, arg1, 164, __wbg_adapter_18);
         return addHeapObject(ret);
     };
 
